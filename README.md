@@ -1,135 +1,129 @@
-# Cybersecurity Risk Analyzer
+# 🔐 Cybersecurity Risk Analyzer
 
-A comprehensive desktop application for network security scanning, vulnerability assessment, and risk analysis.
+## 🌟 Overview
 
-![Cybersecurity Risk Analyzer](resources/lock_icon.png)
+**Cybersecurity Risk Analyzer** is a Java-based desktop application designed to assist security professionals and system administrators in identifying, assessing, and mitigating security risks within their network infrastructure. It provides an intuitive interface for network scans, vulnerability assessments, and generating detailed security reports.
 
-## Overview
+---
 
-The Cybersecurity Risk Analyzer is a Java-based desktop application designed to help security professionals and system administrators identify, assess, and mitigate security risks in their network infrastructure. The application provides a user-friendly interface for conducting network scans, vulnerability assessments, and generating detailed security reports.
+## 🚩 Features
 
-## Application Screenshots
+✅ **Network Scanning** – Scan hosts or IP ranges for open ports and services  
+✅ **Vulnerability Assessment** – Identify security vulnerabilities based on detected services  
+✅ **Risk Analysis** – Prioritize risks based on severity and potential impact  
+✅ **VirusTotal Integration** – Scan files and URLs using VirusTotal API  
+✅ **Comprehensive Reporting** – Generate detailed reports with actionable recommendations  
+✅ **Intuitive Interface** – User-friendly dashboard with clear visualizations  
 
-### Main Dashboard
-![Main Dashboard](resources/lock_icon.png)
-*The main dashboard provides an overview of system security status, recent scans, and detected vulnerabilities.*
+---
 
-### Network Scanning Interface
-![Network Scanner](resources/lock_icon.png)
-*The network scanning interface allows users to specify target hosts, port ranges, and scan parameters.*
+## 💻 System Requirements
 
-### Vulnerability Assessment
-![Vulnerability Assessment](resources/lock_icon.png)
-*The vulnerability assessment view displays detected vulnerabilities with severity ratings and remediation recommendations.*
+| Requirement | Specification |
+|-------------|---------------|
+| ☕ Java Runtime Environment | JRE 8 or higher |
+| 🖥️ Operating System | Windows, macOS, Linux |
+| 🌐 Internet Connection | Required for VirusTotal integration |
+| 🧠 Memory | Minimum 4GB RAM recommended |
+| 🔑 Privileges | Administrator privileges (for certain features) |
 
-### Risk Analysis Report
-![Risk Analysis](resources/lock_icon.png)
-*The risk analysis report provides a comprehensive view of security risks with prioritization based on impact and likelihood.*
+---
 
-## Features
+## 📥 Installation
 
-- **Network Scanning**: Scan individual hosts or IP ranges for open ports and running services
-- **Vulnerability Assessment**: Identify potential security vulnerabilities based on detected services
-- **Risk Analysis**: Evaluate and prioritize security risks based on severity and potential impact
-- **VirusTotal Integration**: Scan files and URLs using the VirusTotal API
-- **Comprehensive Reporting**: Generate detailed reports of scan results and recommended actions
-- **User-Friendly Interface**: Intuitive dashboard with visual representations of security status
+1. Ensure Java 8 or higher is installed.
+2. Download the latest release from the releases page.
+3. Extract the ZIP file to your desired location.
+4. Launch the application:
+```bash
+java -jar CyberSecurityRiskAnalyzer.jar
+```
 
-## System Requirements
+---
 
-- Java Runtime Environment (JRE) 8 or higher
-- Windows, macOS, or Linux operating system
-- Internet connection for VirusTotal API integration
-- Minimum 4GB RAM recommended
-- Administrator privileges for certain scanning features
+## 🚀 Quick Start
 
-## Installation
+1. Launch the Cybersecurity Risk Analyzer.
+2. Enter the target host/IP address in the provided field.
+3. Click **Quick Scan** or configure advanced scan parameters.
+4. View results in the **Results** tab.
+5. Export detailed reports as needed.
 
-1. Ensure you have Java 8 or higher installed on your system
-2. Download the latest release from the releases page
-3. Extract the ZIP file to your preferred location
-4. Run the application by double-clicking the JAR file or using the command:
-   ```
-   java -jar CyberSecurityRiskAnalyzer.jar
-   ```
+---
 
-## Usage
+## 🔑 VirusTotal API Integration
 
-### Quick Start
+To enable VirusTotal scanning:
 
-1. Launch the application
-2. Enter the target host or IP address in the "Host" field
-3. Click "Quick Scan" for a basic assessment or configure port ranges for a more detailed scan
-4. View results in the Results tab
-5. Export reports as needed
+1. Obtain an API key from [VirusTotal](https://www.virustotal.com/gui/join-us).
+2. Navigate to the application's settings panel.
+3. Enter your API key and save configuration.
 
-![Quick Start Guide](resources/lock_icon.png)
-*Step-by-step guide for performing a quick security scan*
+---
 
-### API Key Configuration
+## 🔄 Workflow Diagram
 
-For VirusTotal integration:
-1. Obtain an API key from [VirusTotal](https://www.virustotal.com/gui/join-us)
-2. Enter your API key in the settings panel
-3. Save your configuration
+```
+User Input (Hosts/IPs/URLs) ➡️ Network Scanning ➡️ Vulnerability Assessment ➡️ Risk Analysis & Prioritization ➡️ Reporting & Recommendations
+```
 
-![API Configuration](resources/lock_icon.png)
-*VirusTotal API key configuration interface*
+---
 
-## Workflow Diagram
+## 📁 Project Structure
 
-![Workflow Diagram](resources/lock_icon.png)
-*This diagram illustrates the typical workflow for conducting a complete security assessment using the application.*
+```plaintext
+CyberSecurityRiskAnalyzer/
+├── src/
+│   ├── CyberSecurityDesktopApp.java      # Main GUI application
+│   ├── CyberSecurityRiskAnalyzer.java    # Core risk analysis logic
+│   ├── NetworkScanner.java               # Network scanning implementation
+│   ├── VirusTotalScanner.java            # VirusTotal API integration
+│   ├── VulnerabilityDatabase.java        # Known vulnerabilities DB
+│   ├── RiskAssessmentEngine.java         # Risk prioritization engine
+│   ├── NetworkScannerAPI.java            # Network scanning API methods
+│   ├── JSONUtil.java                     # JSON processing utilities
+│   └── IconLoader.java                   # Icon loading utilities
+├── data/                                 # Vulnerability databases
+├── resources/                            # Application resources/icons
+└── reports/                              # Generated security reports
+```
 
-## Project Structure
+---
 
-- `CyberSecurityDesktopApp.java` - Main application class with GUI components
-- `CyberSecurityRiskAnalyzer.java` - Core functionality for risk analysis
-- `NetworkScanner.java` - Network scanning implementation
-- `VirusTotalScanner.java` - Integration with VirusTotal API
-- `VulnerabilityDatabase.java` - Database of known vulnerabilities
-- `RiskAssessmentEngine.java` - Risk evaluation and prioritization
-- `NetworkScannerAPI.java` - API for network scanning operations
-- `JSONUtil.java` - Utilities for JSON processing
-- `IconLoader.java` - Utility for loading application icons
-- `data/` - Directory containing vulnerability databases
-- `resources/` - Directory containing application resources
+### 🛠️ Building from Source
 
-## Development
+Clone this repository:
+```bash
+git clone https://github.com/yourusername/CyberSecurityRiskAnalyzer.git
+cd CyberSecurityRiskAnalyzer/src
+javac *.java
+java CyberSecurityDesktopApp
+```
 
-### Building from Source
+### 🏗️ Architecture Diagram
 
-1. Clone the repository
-2. Ensure you have JDK 8 or higher installed
-3. Compile the source files:
-   ```
-   javac *.java
-   ```
-4. Run the application:
-   ```
-   java CyberSecurityDesktopApp
-   ```
+```
+User Interface (Java Swing GUI)
+          │
+          ▼
+Core Application Logic (Risk Analyzer Engine)
+          │
+          ├─▶ Network Scanner Module ◀─┐
+          │                           │
+          ├─▶ Vulnerability Database ◀┤
+          │                           │
+          └─▶ VirusTotal Integration ◀┘
+          │
+          ▼
+Reporting & Visualization Module (Reports & Dashboards)
+```
 
-### Architecture Diagram
+## ⚠️ Disclaimer
 
-![Architecture Diagram](resources/lock_icon.png)
-*High-level architecture diagram showing the main components and their interactions*
+This tool is intended solely for legitimate security testing and assessment purposes. Always ensure you have explicit authorization before scanning any systems or networks. The developers are not responsible for misuse or damage caused by this application.
 
-### Contributing
+---  
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+✨ *Thank you for checking out Cybersecurity Risk Analyzer!* ✨
 
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Acknowledgments
-
-- NIST Cybersecurity Framework
-- CWE (Common Weakness Enumeration)
-- CVE (Common Vulnerabilities and Exposures)
-- VirusTotal API
-
-## Disclaimer
-
-This tool is intended for legitimate security testing and assessment purposes only. Always ensure you have proper authorization before scanning any systems or networks. The developers are not responsible for any misuse or damage caused by this application. 
+---
